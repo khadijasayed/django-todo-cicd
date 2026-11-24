@@ -26,6 +26,7 @@ pipeline {
             steps {
                 // Build locally first without hardcoding the Docker Hub username
                 sh "docker build -t todo-app ."
+                sh "docker rmi todo-app"
             }
         }
 
