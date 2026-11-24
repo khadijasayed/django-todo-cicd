@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('clone-repo') {
             steps {
-                git branch: 'develop', url: 'hhttps://github.com/khadijasayed/django-todo-cicd/'
+                git branch: 'develop', url: 'https://github.com/khadijasayed/django-todo-cicd/'
             }
         }
 
