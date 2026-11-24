@@ -32,7 +32,7 @@ pipeline {
         stage('deploy-on-server') {
             steps {
                 // Build locally first without hardcoding the Docker Hub username
-                 sh "docker-compose up -d --build"
+                 sh "docker compose up -d --build"
             }
         }
     }
