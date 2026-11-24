@@ -32,10 +32,7 @@ pipeline {
         stage('deploy-on-server') {
             steps {
                 // Build locally first without hardcoding the Docker Hub username
-                sh "docker volume create sqlite-data"
-                sh "docker stop todo-container || true"
-                sh "docker rm todo-container || true"
-                sh "docker run -d --name todo-container -p 8000:8000 -v sqlite-data:/data/db todo-app"
+                 sh "docker compose up -d --build"
             }
         }
     }
